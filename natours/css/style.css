@@ -340,7 +340,13 @@ body {
   font-weight: 700;
   display: block;
   margin-left: 2rem;
-  margin-top: 0.7rem; }
+  margin-top: 0.7rem;
+  transition: all 0.3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
 
 .form__input {
   display: block;

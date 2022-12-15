@@ -9,6 +9,13 @@
     display: block;
     margin-left: 2rem;
     margin-top: 0.7rem;
+    transition: all 0.3s;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
   }
 
   &__input {

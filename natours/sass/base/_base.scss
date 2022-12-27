@@ -8,8 +8,23 @@
 
 html {
   // This defines what 1rem is.
-  /* font-size: 10px; */
-  font-size: 62.5%;
+  font-size: base-font-size(10px);
+
+  @include respond($tablet-landscape) {
+    font-size: base-font-size(9px);
+  }
+
+  @include respond($tablet-portrait) {
+    font-size: base-font-size(8px);
+  }
+
+  @include respond($phone) {
+    // font-size: base-font-size(7px);
+  }
+
+  @include respond($big-desktop) {
+    font-size: base-font-size(12px);
+  }
 }
 
 body {

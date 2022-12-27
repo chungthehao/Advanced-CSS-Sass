@@ -12,3 +12,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint >= $big-desktop) {
+    @media (min-width: ($breakpoint / $browser-default-font-size * 1em)) {
+      @content;
+    }
+  } @else {
+    @media (max-width: ($breakpoint / $browser-default-font-size * 1em)) {
+      @content;
+    }
+  }
+}

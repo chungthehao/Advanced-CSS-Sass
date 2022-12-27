@@ -1,0 +1,6 @@
+@function base-font-size($pixels) {
+  // Our webpages will be able to change respectively to the font size
+  // that users change in their browsers if we use percentage
+  // instead of px. (default value: 16px)
+  @return percentage($pixels / $browser-default-font-size);
+}

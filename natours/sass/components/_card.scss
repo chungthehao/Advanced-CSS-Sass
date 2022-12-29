@@ -178,4 +178,56 @@
     font-size: 6rem;
     font-weight: 100;
   }
+
+  // MEDIA QUERY FOR A LARGE AMOUNT OF CHANGES
+  @include respond($tablet-portrait) {
+    height: auto;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem 0 rgba($color-black, 0.15);
+    border-radius: 3px;
+    overflow: hidden;
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+      border-radius: 0;
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        padding: 6rem 4rem 4rem 4rem;
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &:hover &__side--back {
+      transform: rotateY(0);
+    }
+
+    // FRONT SIDE
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    // BACK SIDE
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 100%;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-value {
+      font-size: 5rem;
+    }
+  }
 }

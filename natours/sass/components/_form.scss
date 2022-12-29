@@ -31,6 +31,10 @@
     border-bottom: 3px solid transparent;
     transition: all 0.3s;
 
+    @include respond($tablet-portrait) {
+      width: 100%;
+    }
+
     &::placeholder {
       color: $color-grey-dark-2;
     }
@@ -49,6 +53,11 @@
   &__radio-group {
     display: inline-block;
     width: 49%;
+
+    @include respond($tablet-portrait) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-label {

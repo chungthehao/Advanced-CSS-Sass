@@ -4,3 +4,7 @@
   // instead of px. (default value: 16px)
   @return percentage($pixels / $browser-default-font-size);
 }
+
+@function convert-px-2-em($pixels) {
+  @return $pixels / $browser-default-font-size * 1em;
+}

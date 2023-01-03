@@ -15,11 +15,11 @@
 
 @mixin respond($breakpoint) {
   @if ($breakpoint >= $big-desktop) {
-    @media (min-width: ($breakpoint / $browser-default-font-size * 1em)) {
+    @media (min-width: convert-px-2-em($breakpoint)) {
       @content;
     }
   } @else {
-    @media (max-width: ($breakpoint / $browser-default-font-size * 1em)) {
+    @media (max-width: convert-px-2-em($breakpoint)) {
       @content;
     }
   }

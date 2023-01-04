@@ -180,7 +180,8 @@
   }
 
   // MEDIA QUERY FOR A LARGE AMOUNT OF CHANGES
-  @include respond($tablet-portrait) {
+  @media only screen and (max-width: convert-px-2-em(900px)),
+    only screen and (hover: none) {
     height: auto;
     background-color: $color-white;
     box-shadow: 0 1.5rem 4rem 0 rgba($color-black, 0.15);

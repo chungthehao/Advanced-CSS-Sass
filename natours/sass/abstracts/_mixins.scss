@@ -15,11 +15,11 @@
 
 @mixin respond($breakpoint) {
   @if ($breakpoint >= $big-desktop) {
-    @media (min-width: convert-px-2-em($breakpoint)) {
+    @media only screen and (min-width: convert-px-2-em($breakpoint)) {
       @content;
     }
   } @else {
-    @media (max-width: convert-px-2-em($breakpoint)) {
+    @media only screen and (max-width: convert-px-2-em($breakpoint)) {
       @content;
     }
   }

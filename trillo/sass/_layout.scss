@@ -48,8 +48,11 @@
 }
 
 .description {
-  background-color: cyan;
+  background-color: #fff;
   flex: 0 0 60%;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  font-size: 1.4rem;
 }
 
 .user-reviews {

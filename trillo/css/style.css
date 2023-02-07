@@ -58,6 +58,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 30em) {
+    .header {
+      flex-wrap: wrap;
+      height: 11rem; } }
 
 .content {
   flex: 1;
@@ -88,6 +92,9 @@ body {
     .detail {
       padding: 3rem;
       gap: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   background-color: #fff;
@@ -113,6 +120,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 30em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--color-grey-light-2); } }
   .search__input {
     border: none;
     color: inherit;
@@ -232,13 +244,16 @@ body {
     @media only screen and (max-width: 56.25em) {
       .side-nav__link:link, .side-nav__link:visited {
         justify-content: center;
-        padding: 2rem 3rem; } }
+        padding: 2rem 0; } }
   .side-nav__link:hover, .side-nav__link:active {
     text-decoration: none; }
   .side-nav__icon {
     height: 1.75rem;
     width: 1.75rem;
     fill: currentColor; }
+  @media only screen and (max-width: 30em) {
+    .side-nav span {
+      display: none; } }
 
 .legal {
   font-size: 1.2rem;
@@ -265,6 +280,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem; } }
   .overview__stars {
     display: flex; }
   .overview__icon-star, .overview__icon-location {
@@ -287,13 +306,22 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0 2.25rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating {
+        padding: 0 1.5rem; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating-average {
+        font-size: 1.8rem; } }
   .overview__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating-count {
+        font-size: 0.6rem; } }
 
 .btn-inline {
   cursor: pointer;

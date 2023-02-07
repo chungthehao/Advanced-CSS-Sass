@@ -127,11 +127,24 @@
   font-size: 1.4rem;
   margin-top: 3.5rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    margin-top: 0;
+  }
+
   &__item {
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
     }
   }
 
@@ -172,7 +185,12 @@
     display: flex;
     gap: 2rem;
     align-items: center;
-    padding: 1.5rem 0.5rem 1.5rem 3rem;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+      padding: 2rem 3rem;
+    }
   }
 
   &__link:hover,
@@ -194,6 +212,10 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 //////////////////////////////////////////////////////////////
@@ -370,6 +392,7 @@
   }
 
   &__friends {
+    display: flex;
   }
 
   &__photo {
@@ -380,7 +403,7 @@
     box-sizing: content-box;
 
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }
@@ -392,8 +415,11 @@
   padding: 3rem;
   position: relative;
   overflow: hidden;
-  &:not(:last-child) {
-    margin-bottom: 3.5rem;
+  margin-bottom: 3.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
   }
 
   &::before {
@@ -455,6 +481,10 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
 
   &__book-now {
     font-size: 2rem;
